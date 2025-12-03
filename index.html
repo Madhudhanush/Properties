@@ -662,53 +662,68 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 900px) {
-            #home {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 100px;
-                gap: 2rem;
-            }
+        /*----------------------------------------------------------
+    RESPONSIVE DESIGN SYSTEM
+----------------------------------------------------------*/
 
-            .hero-img img {
-                width: 260px;
-                height: 260px;
-            }
+@media (max-width: 900px) {
 
-            .orbit {
-                width: 300px;
-                height: 300px;
-            }
+    /* Layout stack for mobile */
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;     /* Increased gap for header + image */
+        gap: 2rem;
+    }
 
-            .hero-text h1 {
-                font-size: 3rem;
-            }
+    /* Extra space above the image so it doesn't touch the header */
+    .hero-img {
+        margin-top: 40px;
+    }
 
-            .hero-contact-row {
-                justify-content: center;
-            }
+    .hero-img img {
+        width: 260px;
+        height: 260px;
+        margin-top: 15px;      /* Additional breathing space */
+    }
 
-            nav {
-                justify-content: center;
-                flex-direction: column;
-                gap: 1rem;
-            }
+    .orbit {
+        width: 300px;
+        height: 300px;
+    }
 
-            .nav-links {
-                gap: 1.5rem;
-                font-size: 0.9rem;
-            }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
 
-            .cursor-main,
-            .cursor-trail {
-                display: none;
-            }
+    .hero-contact-row {
+        justify-content: center;
+    }
 
-            * {
-                cursor: auto;
-            }
-        }
-    </style>
+    nav {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Disable custom cursor for mobile */
+    .cursor-main,
+    .cursor-trail {
+        display: none;
+    }
+
+    * {
+        cursor: auto;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
